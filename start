@@ -2,7 +2,7 @@
 
 package_file=astra-prepare.run
 
-donwload()
+download()
 {
 wget -O ${package_file} https://raw.githubusercontent.com/molokovskikh/astra-prepare/main/astra-prepare.run &&
 chmod +x astra-prepare.run
