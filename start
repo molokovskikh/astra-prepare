@@ -1,0 +1,21 @@
+#!/usr/bin/env bash
+
+package_file=astra-prepare.run
+
+donwload()
+{
+wget -O ${package_file} https://raw.githubusercontent.com/molokovskikh/astra-prepare/main/astra-prepare.run &&
+chmod +x astra-prepare.run
+}
+
+run()
+{
+./${package_file}
+}
+
+
+test -f ${package_file} || download
+
+test -f ${package_file} || echo "Не найден файл пакета"
+
+test -f ${package_file} && run
