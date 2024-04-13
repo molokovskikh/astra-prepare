@@ -13,6 +13,7 @@ run()
 ./${package_file}
 }
 
+test -f ${package_file} && [ $(stat -c %s ${package_file}) = 0 ] && rm -rf ${package_file}
 
 test -f ${package_file} || download
 
